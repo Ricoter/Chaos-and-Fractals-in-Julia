@@ -17,6 +17,6 @@ picca = [abs(mandelbrot(complex(x,y))) for y=1.0:-0.001:-1.0, x=-2.0:0.001:0.5]
 using Plots, Images
 
 # colorview(Gray, picca)
+img = plot_color(picca)
 
-
-plot_color(picca) # contourplot
+save("contourplot_mandelbrot.png", img) # contourplot
