@@ -90,5 +90,5 @@ println("dibe")
 # img2 = plot_color(data2)
 
 # display(x[end])
-# save("julia_contourplot.png", img1)
-# save("julia_fatouplot.png$c", img2)   
+# save("julia_contour.png", img1)
+# save("julia_fatou.png", img2)   
