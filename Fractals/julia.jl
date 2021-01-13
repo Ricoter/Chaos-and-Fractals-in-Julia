@@ -59,7 +59,7 @@ function to_img(data, display=true, save=false)
 end
 
 function to_anim(data, display=true, save=false)
-    
+    nothing
 end
 # while true
 #     z = C = rand(PLANE)
