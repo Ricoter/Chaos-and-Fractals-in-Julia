@@ -52,7 +52,7 @@ function gravity(x)
 end
 
 function UniverseAnimation(n=3)
-    "3D movie of n-body system"
+    "3D animation of n-body system"
     
     # init animation
     anim = Animation()
@@ -88,8 +88,7 @@ function UniverseAnimation(n=3)
     for ϕ in range(0, stop=2π, length=300)
         
         # Accaleration
-        v .+= gravity(x) * 1e7
-        # particles = [particles[i,:] .+ v[i,:] for i=1:n]
+        v += gravity(x) * 1e7
         x += v
         scatter3d(
             x[:,1],

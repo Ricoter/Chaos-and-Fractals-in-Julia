@@ -1,5 +1,5 @@
 # Chaos-and-Fractals-in-Julia
-Play around with chaos and fractals in Julia v1.5.3
+Play around with chaos and fractals in Julia
 
 Learning goals
 - data visualisation and fancy plotting
