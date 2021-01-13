@@ -19,9 +19,10 @@ during the early 20th century.
 =#
 using Plots, Images
 
+# Different values of C provide different fractals
 const C = complex(-0.1, 0.651)#-.08im
-global z_init = 0
 const MAX_ITER = 750
+
 const XRANGE = -2:0.001:2
 const YRANGE = -1.5:0.001:1.5
 const PLANE = complex.(XRANGE', YRANGE)
@@ -29,16 +30,14 @@ const PLANE = complex.(XRANGE', YRANGE)
 function Julia(c)
     """Mandelbrot was Right"""
     z = 0 
-    for _=1:MAX_ITER # number of iterations
+    for _=1:MAX_ITER
         z = z^2 + C
     end
     return z
 end
 
 function Fatou(z, c)
-    """
-        The fatouset are the lines 
-    """
+    """The fatouset are the outerlines"""
     n = 0
     while abs(z) <= 2 && n < MAX_ITER
         z = z^2 + c
@@ -47,6 +46,21 @@ function Fatou(z, c)
     return n
 end
 
+function to_img(data, display=true, save=false)
+    """Data -> img"""
+    img = plot_color(data)
+    if display==true
+        display(img)
+    end
+    if save!=false
+        save("julia_$save.png", img)
+    end
+    return img
+end
+
+function to_anim(data, display=true, save=false)
+    
+end
 # while true
 #     z = C = rand(PLANE)
 #     i = 0
