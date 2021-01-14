@@ -1,8 +1,8 @@
 #=
-Implementation of cobweb plot
+Implementation of bifuration diagram
 Rico van Midde 2021
 =#
 
-function ()
+function Bifurcation(x::Array, bins=100, T=300)
     
 end
