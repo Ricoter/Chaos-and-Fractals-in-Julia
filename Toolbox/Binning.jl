@@ -35,6 +35,13 @@ function Binning(x::Array)
         println("warning: binning maybe not converged, meanlastchanges: $meanlastchanges")
         converged = 0
     end
-    
+
     return errors, tau, converged, bins
+end
+
+if isinteractive()
+    """
+        You can run this file to see an example
+    """
+
 end

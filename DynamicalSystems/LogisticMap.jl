@@ -21,7 +21,7 @@ Base.@kwdef mutable struct LogisticMap
 end
 
 function next!(l::LogisticMap)
-    l.x *= l.r * (1 - l.x) 
+    l.x *= l.r * (1 - l.x)
 end
 
 if isinteractive()
@@ -33,5 +33,7 @@ if isinteractive()
 
     attractor = LogisticMap()           # Init logistic map variable
     x = [next!(attractor) for _=1:100]  # Evolve
-    display(Cobweb(x, legend=false))                  # Display a cobweb-plot
+
+    
+    display(Cobweb(x, legend=false))     # Display a cobweb-plot
 end
