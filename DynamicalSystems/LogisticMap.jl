@@ -1,6 +1,6 @@
 #= 
 
-Implementation of the logistic map by Rico van Midde in 2021
+Implementation of the logistic map by Rico van Midde, 2021
 
 The logistic map is a discrete 1-dimensional map in the form of a first order
 quadratic difference equation. It was discovered in 1976 by Robert May when
@@ -26,11 +26,12 @@ end
 
 if isinteractive()
     """
-        You can run this file to see an example plot
+        You can run this file to see an example
     """
     using Plots
-    import 
+    include("../Plots/Cobweb.jl")
 
     attractor = LogisticMap()           # Init logistic map variable
     x = [next!(attractor) for _=1:100]  # Evolve
+    display(Cobweb(x, legend=false))                  # Display a cobweb-plot
 end
