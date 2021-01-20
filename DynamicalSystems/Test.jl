@@ -3,6 +3,7 @@ using Plots
 include("SineMap.jl")
 include("LogisticMap.jl")
 include("LorenzAttractor.jl")
+include("../Plots/Bifurcation.jl")
 # include("NBodySimulation.jl")
 
 function tCobweb(attractor)    # Init logistic map variable
@@ -13,7 +14,7 @@ function tCobweb(attractor)    # Init logistic map variable
 
     # Add function mapping
     x = 0:0.01:1
-    y = next!.(LogisticMap.(x, 3.9))
+    y = next!.(SineMap.(x, 0.99))
     display(plot!(x, y))
 end
 
@@ -46,11 +47,12 @@ function tBifurcation(
     rspan = [3,4],
     save=false
 )
-    include("../Plots/Bifurcation.jl")
+
     plt = Bifurcation(
         attractor,
         rspan=rspan,
     )
+
     display(plt)
     if save!=false
         savefig(plt, save)
@@ -59,4 +61,5 @@ end
 
 # @time tCobweb(LogisticMap(r=3.9))
 # @time tLorenz()
-@time tBifurcation(SineMap, rspan=[0,1])
+@time tBifurcation(SineMap, rspan=[0.7, 1])
+# @time tCobweb(SineMap(x=0.6,r=0.99))

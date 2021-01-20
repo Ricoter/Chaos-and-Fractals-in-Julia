@@ -14,10 +14,10 @@ the algebraic form of f(x)
 =#
 
 Base.@kwdef mutable struct SineMap
-    x::Float64 = 0.1
+    x::Float64 = 0.6
     r::Float64 = 0.9
 end
 
-function next!(l::SineMap)
-    l.x *= l.r * sin(π * l.x)
+function next!(s::SineMap)
+    s.x *= (s.r / s.x) * sin(π * s.x)
 end

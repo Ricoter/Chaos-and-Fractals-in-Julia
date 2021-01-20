@@ -15,6 +15,7 @@ function Bifurcation(
 
     default(                # Default keyword arguments
         legend=false,
+        xlim=rspan,
         markersize=1,
         markerstrokewidth=0,
         alpha=0.1,
