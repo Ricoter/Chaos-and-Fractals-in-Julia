@@ -1,6 +1,7 @@
 using Plots
 
 include("SineMap.jl")
+include("TentMap.jl")
 include("LogisticMap.jl")
 include("LorenzAttractor.jl")
 include("../Plots/Bifurcation.jl")
@@ -61,5 +62,7 @@ end
 
 # @time tCobweb(LogisticMap(r=3.9))
 # @time tLorenz()
-@time tBifurcation(SineMap, rspan=[0.7, 1])
+# @time tBifurcation(SineMap, rspan=[0.7, 1])
 # @time tCobweb(SineMap(x=0.6,r=0.99))
+
+@time tBifurcation(TentMap, rspan=[1,2])
