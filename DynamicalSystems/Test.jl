@@ -53,4 +53,4 @@ end
 
 # @time tCobweb(LogisticMap(r=3.9))
 # @time tLorenz()
-# @time tBifurcation()
+@time tBifurcation()
