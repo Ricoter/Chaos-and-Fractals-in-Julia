@@ -38,34 +38,3 @@ function Bifurcation(
     x = [next!.(a) for _=1:iters+T][T+1:end]
     return scatter(r, x, kwargs...)
 end
-
-    
-#     img = zeros(img_size)
-
-#     for r in rspan
-#         lm = attractor(r=r)
-#         r = scale(
-#             r, 
-#             alim = [rspan[1],rspan[end]], 
-#             blim = [1,img_size[1]]
-#         )
-
-#         for i=1:iters + T
-#             x = scale(
-#                 next!(lm), 
-#                 alim = [0,1], 
-#                 blim = [1,img_size[2]]
-#             )
-
-#             if i > T
-#                 img[r,x] += 1
-#             end
-#         end
-
-#     end
-#     println(maximum(img))
-#     # img = rotl90(img) .* 1
-#     # img[img .== 0 ] .= -2
-#     # plot_color(img)
-#     img
-# end
