@@ -49,6 +49,7 @@ function tBifurcation(;
         rspan=rspan,
     )
     display(plt)
+    savefig(plt, "LogisticMap_Bifurcation.png")
 end
 
 # @time tCobweb(LogisticMap(r=3.9))
