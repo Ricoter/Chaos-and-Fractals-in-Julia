@@ -1,4 +1,6 @@
 using Plots
+
+include("SineMap.jl")
 include("LogisticMap.jl")
 include("LorenzAttractor.jl")
 # include("NBodySimulation.jl")
@@ -42,6 +44,7 @@ end
 function tBifurcation(;
     attractor = LogisticMap,
     rspan = [3,4],
+    save=false
 )
     include("../Plots/Bifurcation.jl")
     plt = Bifurcation(
@@ -49,9 +52,10 @@ function tBifurcation(;
         rspan=rspan,
     )
     display(plt)
-    savefig(plt, "LogisticMap_Bifurcation.png")
+    if save!=false
+        savefig(plt, save)
 end
 
 # @time tCobweb(LogisticMap(r=3.9))
 # @time tLorenz()
-@time tBifurcation()
+@time tBifurcation(SineMap)

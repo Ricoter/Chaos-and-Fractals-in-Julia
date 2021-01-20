@@ -3,19 +3,7 @@ Implementation of bifuration diagram
 Rico van Midde 2021
 =#
 include("../DynamicalSystems/LogisticMap.jl")
-
-function scale(
-    value;
-    alim=[minimum(value), maximum(value)], 
-    blim=[0,1],
-    )
-    
-    value .-= alim[1]
-    value .*= (diff(alim)/diff(blim))[1]
-    value .+= blim[1]
-    return value
-end
-
+include("../DynamicalSystems/SineMap.jl")
 
 function Bifurcation(
     attractor;              # Struct of the 1D system that has a next! function
