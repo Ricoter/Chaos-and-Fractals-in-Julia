@@ -28,32 +28,3 @@ function step!(l::Lorenz)
     dy = l.x * (l.ρ - l.z) - l.y;   l.y += l.dt * dy
     dz = l.x * l.y - l.β * l.z;     l.z += l.dt * dz
 end
-
-
-if isinteractive()
-    """
-        You can run this file to see an example
-    """
-    using Plots
-
-    x, y, z = 3 * randn(3)
-    attractor = Lorenz(x=x,y=y,z=z)
-
-    # initialize a 3D plot with 1 empty series
-    plt = plot3d(
-        1,
-        xlim = (-30, 30),
-        ylim = (-30, 30),
-        zlim = (0, 60),
-        background = "Black",
-        title = "Lorenz Attractor",
-        marker = 2,
-        label = "Euler Method"
-    )
-
-    # build an animated gif by pushing new points to the plot, saving every 10th frame
-    @gif for i=1:1500
-        step!(attractor)
-        push!(plt, attractor.x, attractor.y, attractor.z)
-    end every 10
-end

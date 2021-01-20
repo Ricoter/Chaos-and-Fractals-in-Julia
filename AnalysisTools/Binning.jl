@@ -38,10 +38,3 @@ function Binning(x::Array)
 
     return errors, tau, converged, bins
 end
-
-if isinteractive()
-    """
-        You can run this file to see an example
-    """
-
-end

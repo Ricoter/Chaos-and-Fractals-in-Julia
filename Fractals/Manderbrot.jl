@@ -34,9 +34,9 @@ end
 # Mandelbrot
 @time data = abs.(mandelbrot.(PLANE))       # get data
 img = plot_color(data)                      # to img
-save("mandelbrot_contour.png", img)         # save the honey
+# save("mandelbrot_contour.png", img)         # save the honey
 
-# Fatou
-@time data = abs.(mandelbrotfatou.(PLANE))  # get data
-img = plot_color(data)                      # to img
-save("mandelbrot_fatou.png", img)           # save the honey
+# # Fatou
+# @time data = abs.(mandelbrotfatou.(PLANE))  # get data
+# img = plot_color(data)                      # to img
+# save("mandelbrot_fatou.png", img)           # save the honey
