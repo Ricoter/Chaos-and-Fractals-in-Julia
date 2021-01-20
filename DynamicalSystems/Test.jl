@@ -41,8 +41,8 @@ function tLorenz()
     end every 10
 end
 
-function tBifurcation(;
-    attractor = LogisticMap,
+function tBifurcation(
+    attractor;
     rspan = [3,4],
     save=false
 )
@@ -54,8 +54,9 @@ function tBifurcation(;
     display(plt)
     if save!=false
         savefig(plt, save)
+    end
 end
 
 # @time tCobweb(LogisticMap(r=3.9))
 # @time tLorenz()
-@time tBifurcation(SineMap)
+@time tBifurcation(SineMap, rspan=[0,1])

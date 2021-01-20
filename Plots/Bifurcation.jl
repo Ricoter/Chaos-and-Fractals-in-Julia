@@ -22,7 +22,7 @@ function Bifurcation(
     )
 
     r = LinRange(rspan[1], rspan[2], n_samples)
-    a = attractor.(0.1,r)
+    a = attractor.(0.6,r)
     x = [next!.(a) for _=1:iters+T][T+1:end]
     return scatter(r, x, kwargs...)
 end
