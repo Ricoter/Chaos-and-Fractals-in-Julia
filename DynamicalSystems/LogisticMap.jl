@@ -16,8 +16,8 @@ is not positive and the systems leaves the chaotic regime.
 =#
 
 Base.@kwdef mutable struct LogisticMap
-    x::Float64 = 0.1
-    r::Float64 = 3.8
+    x::Float64 = 0.1     # ∈ {0,1}
+    r::Float64 = 3.8     # ∈ {0,4}
 end
 
 function next!(l::LogisticMap)

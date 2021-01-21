@@ -5,10 +5,10 @@ Implementation of the Rossler system by Rico van Midde, 2021
 =#
 
 Base.@kwdef mutable struct Rossler
-    dt::Float64 = .02
-    a::Float64 = .2
-    b::Float64 = .2
-    c::Float64 = .2
+    dt::Float64 = 0.02
+    a::Float64 = 0.2
+    b::Float64 = 0.2
+    c::Float64 = 0.2
     x::Float64 = 1
     y::Float64 = 1
     z::Float64 = 1

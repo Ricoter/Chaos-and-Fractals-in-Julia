@@ -4,11 +4,13 @@ include("SineMap.jl")
 include("TentMap.jl")
 include("LogisticMap.jl")
 include("LorenzAttractor.jl")
+
 include("../Plots/Bifurcation.jl")
+include("../Plots/Cobweb.jl")
+
 # include("NBodySimulation.jl")
 
 function tCobweb(attractor)    # Init logistic map variable
-    include("../Plots/Cobweb.jl")
 
     x = [next!(attractor) for _=1:100]  # Evolve
     Cobweb(x, legend=false)             # Display a cobweb-plot

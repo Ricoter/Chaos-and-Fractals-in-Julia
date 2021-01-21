@@ -13,7 +13,7 @@ function Bifurcation(
     iters=100,              # Number of iteration after Thermolization
     kwargs...)              # keyword aruments to pass to Plots
 
-    default(                # Default keyword arguments
+    plot(                # Default keyword arguments
         legend=false,
         xlim=rspan,
         markersize=1,
@@ -25,5 +25,5 @@ function Bifurcation(
     r = LinRange(rspan[1], rspan[2], n_samples)
     a = attractor.(0.6,r)
     x = [next!.(a) for _=1:iters+T][T+1:end]
-    return scatter(r, x; kwargs...)
+    return scatter!(r, x; kwargs...)
 end

@@ -8,13 +8,13 @@ function Cobweb(x::Array; kwargs...)
     x2 = [0; x[3:end]]
 
     lims = [floor(minimum(x)), ceil(maximum(x))]
-    default(
+    plot(
         xlims = lims,
         ylims = lims,
         markersize=2,
     )
 
-    plot(x1, x2; kwargs...)
+    plot!(x1, x2; kwargs...)
     plot!(lims, lims)#, label = "x = y")
 end
 
