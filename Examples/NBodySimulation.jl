@@ -6,7 +6,7 @@ Rico van Midde, 2021
 =#
 
 # std plotlib
-using Plots, LinearAlgebra
+using Plots, LinearAlgebra, Random
 
 # Gravitational constant
 const G = 6.67e-11 # m^3/kg/s^2
@@ -42,7 +42,8 @@ import Base.wait
 wait(anim, t) = [frame(anim) for _=1:t]
 l2_norm(A, dims) = sqrt.(sum(x -> x^2, A, dims=dims))
 
-function gravity(x)
+
+function gravity!(x)
     "Apply gravity for particles with equal mass"
     diff = reshape(x, 1, :, 3) .- reshape(x, :, 1, 3)
     dist = l2_norm(diff, 3)
