@@ -1,3 +1,8 @@
+#=
+
+=#
+
+
 using Plots
 
 include("../DynamicalSystems/SineMap.jl")
@@ -7,7 +12,7 @@ include("../DynamicalSystems/LogisticMap.jl")
 include("../Plots/Cobweb.jl")
 include("../Plots/Bifurcation.jl")
 
-styles = Dict(
+const styles = Dict(
     # name          => (map, rspan)
     "Logistic Map"  => (LogisticMap, [3, 4]),
     "Sine Map"      => (SineMap, [.72, 1]),
