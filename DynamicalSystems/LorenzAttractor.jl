@@ -27,4 +27,5 @@ function step!(l::Lorenz)
     dx = l.σ * (l.y - l.x);         l.x += l.dt * dx
     dy = l.x * (l.ρ - l.z) - l.y;   l.y += l.dt * dy
     dz = l.x * l.y - l.β * l.z;     l.z += l.dt * dz
+    return l.x, l.y, l.z
 end
