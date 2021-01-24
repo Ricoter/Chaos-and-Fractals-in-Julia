@@ -2,6 +2,8 @@
 Implementation of a cobweb-plot by Rico van Midde, 2021
 =#
 
+# TODO convert this code to makie
+
 function Cobweb(x::Array; kwargs...)
     x = repeat(x, inner=2)      # Create doubles
     x1 = x[1:end-1]

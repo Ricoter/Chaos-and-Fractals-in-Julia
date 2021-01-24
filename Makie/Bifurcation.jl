@@ -2,6 +2,8 @@
 Implementation of bifuration diagram
 Rico van Midde 2021
 =#
+
+# TODO convert this code to makie to compare
 include("../DynamicalSystems/LogisticMap.jl")
 include("../DynamicalSystems/SineMap.jl")
 
