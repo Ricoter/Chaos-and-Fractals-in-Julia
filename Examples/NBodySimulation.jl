@@ -3,7 +3,9 @@ Play around with different plots and animations
 of n body system
 
 Rico van Midde, 2021
-=#
+=# 
+
+#TODO replace particle generation and gravity pull with struct and next! in DynamicalSystems
 
 # std plotlib
 using Plots, LinearAlgebra, Random
@@ -75,7 +77,8 @@ function UniverseAnimation(n=3)
     wait(anim, 10)
 
     # create list of n random 3-tups
-    x = rand(n,3)
+    x = rand(n,3) 
+
     for i=1:n
         scatter3d!(
             x[i:i,1], 
