@@ -1,14 +1,16 @@
 using Plots
 
-include("SineMap.jl")
-include("TentMap.jl")
-include("LogisticMap.jl")
-include("LorenzAttractor.jl")
+include("../DynamicalSystems/SineMap.jl")
+include("../DynamicalSystems/TentMap.jl")
+include("../DynamicalSystems/LogisticMap.jl")
+include("../DynamicalSystems/LorenzAttractor.jl")
 
 include("../Plots/Bifurcation.jl")
 include("../Plots/Cobweb.jl")
 
 # include("NBodySimulation.jl")
+
+# TODO rewrite in some compact examples
 
 function tCobweb(attractor)    # Init logistic map variable
 
