@@ -1,7 +1,6 @@
 #=
-
+Example of Bifurcation diagram en Cobweb-plots for various 1D maps
 =#
-
 
 using Plots
 
