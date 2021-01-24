@@ -11,6 +11,8 @@ Perform a binning analysis over samples and return
 =#
 using Statistics
 
+# TODO write a test and example
+
 function Binning(x::Array)
 
     minbin = 2^6                           # minimum number of bins  
