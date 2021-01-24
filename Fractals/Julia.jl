@@ -19,6 +19,8 @@ during the early 20th century.
 =#
 using Plots, Images
 
+# TODO convert this code to something that is easy to include and an example
+
 # Different values of C provide different fractals
 const C = complex(-0.1, 0.651)#-.08im
 const MAX_ITER = 750

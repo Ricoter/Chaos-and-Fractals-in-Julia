@@ -2,6 +2,9 @@
 The mandelbrot set is the set of complex functions for which the function
 does not diverge when iterated from z=0 (wikipedia)
 =#
+
+# TODO convert this code to something that is easy to include and an example
+
 using Plots, Images
 
 const MAX_ITER_FATOU = 40
