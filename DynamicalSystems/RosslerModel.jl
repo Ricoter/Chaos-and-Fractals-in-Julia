@@ -15,8 +15,8 @@ Base.@kwdef mutable struct Rossler
 end
 
 function step!(r::Rossler)
-    dx = - r.y - r.z;           r.x += r.dt * dx
-    dy = r.x + r.z;             r.y += r.dt * dy
-    dz = b + r.z * (r.x - c);   r.z += r.dt * dz
+    dx = - r.y - r.z;               r.x += r.dt * dx
+    dy = r.x + r.a * r.y;           r.y += r.dt * dy
+    dz = r.b + r.z * (r.x - r.c);   r.z += r.dt * dz
     return r.x, r.y, r.z
 end
