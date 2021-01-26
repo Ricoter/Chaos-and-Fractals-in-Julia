@@ -1,6 +1,6 @@
 #=
 
-Implementation of the PWLDuffing system by Rico van Midde, 2021
+Implementation of the piecewise-linear (PWL) Duffing system by Rico van Midde, 2021
 
 
 =#
