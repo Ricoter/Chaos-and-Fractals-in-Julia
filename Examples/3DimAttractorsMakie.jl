@@ -20,7 +20,7 @@ styles = Dict(
 
 dt = 0.01
 name = "Lorenz Attractor"
-name = "Rossler Model"
+# name = "Rossler Model"
 
 model, kwargs = styles[name]
 attractor = model(dt=dt; kwargs...)
@@ -31,9 +31,12 @@ z = [z for (_,_,z) in xyz]
 
 f = Figure()
 
-lines(f[1:3,1], xyz, markersize=0.5, color=:blue)
-lines(f[1,2], x)
-lines(f[2,2], y)
-lines(f[3,2], z)
+
+lines(f[1:3,1], xyz, markersize=0.5, color=(:blue, 0.8), axis = (title="aaa",))
+lines(f[1,2], x, axis = (ylabel = "x",), color=(:green, 0.8))
+lines(f[2,2], y, axis = (ylabel = "y",), color=(:purple, 0.8))
+lines(f[3,2], z, axis = (ylabel = "z", xlabel = "t"), color=(:red, 0.8))
+
+Label(f[0,:], name, textsize = 45, color = (:black, 0.25))
 
 f
