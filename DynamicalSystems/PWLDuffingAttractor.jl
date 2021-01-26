@@ -13,6 +13,7 @@ an oversimplified model of atmospheric convection when the parameters σ,
 
 =#
 
+#TODO add examples
 Base.@kwdef mutable struct PWLDuffing
     dt::Float64 = .02
     t::Float64 = 0
