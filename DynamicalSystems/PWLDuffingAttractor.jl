@@ -1,19 +1,12 @@
 #=
 
-Implementation of the Lorenz system by Rico van Midde, 2021
-(Code is based on http://docs.juliaplots.org/latest/#simple-is-beautiful)
+Implementation of the PWLDuffing system by Rico van Midde, 2021
 
-The Lorenz system is a continuous time, three-dimensional system that is
-described by a set of ordinary differential equation. It was discovered in
-1963 by Edward Lorenz when he was searching for the most simple equations
-that could mimic the sensitive evolution that he found earlier in his more
-complex weather model (the one from section 2.1). The equations describes
-an oversimplified model of atmospheric convection when the parameters σ,
-ρ, β are positive.
 
 =#
 
 #TODO add examples
+
 Base.@kwdef mutable struct PWLDuffing
     dt::Float64 = .02
     t::Float64 = 0
@@ -22,7 +15,7 @@ Base.@kwdef mutable struct PWLDuffing
     y::Float64 = 0
 
     e::Float64 = .25
-    i::Float64 = -14
+    i::Float64 = -14            # {-25, 25}
     γ::Float64 = .14 + im/20 
     ω::Float64 = 1
     m0::Float64 = -.0845
