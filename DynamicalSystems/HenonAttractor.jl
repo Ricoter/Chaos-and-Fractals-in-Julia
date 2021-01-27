@@ -19,15 +19,15 @@ obtained from its orbit diagram." ~ (wikipedia)
 # TODO Add examples and test
 
 Base.@kwdef mutable struct Henon
-    dt::Float64 = 0.02
-    a::Float64 = 1.4
-    b::Float64 = 0.3
     x::Float64 = 1
     y::Float64 = 1
+
+    a::Float64 = 1.4
+    b::Float64 = 0.3
 end
 
 function step!(h::Henon)
-    dx = 1 - h.a * h.x^2 + h.y;     h.x += h.dt * dx
-    dy = h.b * h.x;                 h.y += h.dt * dy
+    h.x = 1 - h.a * h.x^2 + h.y
+    h.y = h.b * h.x
     return h.x, h.y
 end
