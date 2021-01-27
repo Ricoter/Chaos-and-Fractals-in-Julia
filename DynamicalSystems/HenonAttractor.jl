@@ -16,7 +16,7 @@ or converge to a periodic orbit. An overview of the type of behavior of the map 
 obtained from its orbit diagram." ~ (wikipedia)
 =#
 
-# TODO Add examples
+# TODO Add examples and test
 
 Base.@kwdef mutable struct Henon
     dt::Float64 = 0.02
