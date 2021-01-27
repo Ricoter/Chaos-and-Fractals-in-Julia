@@ -5,7 +5,7 @@ Implementation of the piecewise-linear (PWL) Duffing system by Rico van Midde, 2
 
 =#
 
-#TODO add examples
+#TODO add examples + test
 
 Base.@kwdef mutable struct PWLDuffing
     dt::Float64 = .02
