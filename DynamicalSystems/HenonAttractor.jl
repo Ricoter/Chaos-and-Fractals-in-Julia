@@ -27,7 +27,10 @@ Base.@kwdef mutable struct Henon
 end
 
 function step!(h::Henon)
-    h.x = 1 - h.a * h.x^2 + h.y
-    h.y = h.b * h.x
+    x = h.x
+    
+    h.x = 1 - h.a * x^2 + h.y
+    h.y = h.b * x
+
     return h.x, h.y
 end
