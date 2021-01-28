@@ -14,18 +14,30 @@ an oversimplified model of atmospheric convection when the parameters σ,
 =#
 
 Base.@kwdef mutable struct Lorenz
+    # timestep size
     dt::Float64 = 0.02
-    σ::Float64 = 10
-    ρ::Float64 = 28
-    β::Float64 = 8/3
+
+    # position variables
     x::Float64 = 1
     y::Float64 = 1
     z::Float64 = 1
+
+    # parameters
+    σ::Float64 = 10
+    ρ::Float64 = 28
+    β::Float64 = 8/3
 end
 
 function step!(l::Lorenz)
-    dx = l.σ * (l.y - l.x);         l.x += l.dt * dx
-    dy = l.x * (l.ρ - l.z) - l.y;   l.y += l.dt * dy
-    dz = l.x * l.y - l.β * l.z;     l.z += l.dt * dz
+    # difference
+    dx = l.σ * (l.y - l.x)
+    dy = l.x * (l.ρ - l.z) - l.y
+    dz = l.x * l.y - l.β * l.z
+
+    # update
+    l.x += l.dt * dx
+    l.y += l.dt * dy
+    l.z += l.dt * dz
+
     return l.x, l.y, l.z
 end
