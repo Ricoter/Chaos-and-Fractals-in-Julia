@@ -26,7 +26,7 @@ Base.@kwdef mutable struct Chua
 end
 
 # piecewise linear function
-ϕ(x, m0, m1) = m1*x + (m0-m1) * (abs(x+1) - abs(x-1))
+ϕ(x, m0, m1) = m1*x + (m0-m1)/2 * (abs(x+1) - abs(x-1))
 
 function step!(s::Chua)
     # differences
