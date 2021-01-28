@@ -17,14 +17,14 @@ styles = Dict(
     "Rossler Model"    => [Rossler, (a=0.1, b=0.1, c=14)],
 )
 
-dt = 0.00001
+dt = 0.02
 name = "Lorenz Attractor"
-# name = "Rossler Model"
-name = "Chua Circuit"
+name = "Rossler Model"
+# name = "Chua Circuit" # FIXME flies off to inf
 
 model, kwargs = styles[name]
 attractor = model(dt=dt; kwargs...)
-xyz = [step!(attractor) for _=1:10000000][begin:1000:end]
+xyz = [step!(attractor) for _=1:10000]
 x = [x for (x,_,_) in xyz]
 y = [y for (_,y,_) in xyz]
 z = [z for (_,_,z) in xyz]
