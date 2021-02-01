@@ -6,9 +6,10 @@ Example: plots in Makie of 3D dynamical system
 
 using GLMakie, AbstractPlotting
 
-include("../DynamicalSystems/LorenzAttractor.jl")
-include("../DynamicalSystems/RosslerModel.jl")
-include("../DynamicalSystems/ChuaAttractor.jl")
+# include("../DynamicalSystems/LorenzAttractor.jl")
+# include("../DynamicalSystems/RosslerModel.jl")
+# include("../DynamicalSystems/ChuaAttractor.jl")
+using .ChaosAndFractals
 
 # 
 styles = Dict(
@@ -17,10 +18,10 @@ styles = Dict(
     "Rossler Model"    => [Rossler, (a=0.1, b=0.1, c=14)],
 )
 
-dt = 0.0001
+dt = 0.01
 name = "Lorenz Attractor"
 name = "Rossler Model"
-name = "Chua Circuit" # FIXME Probably needs some Runge-Kutta integration method
+# name = "Chua Circuit" # FIXME Probably needs some Runge-Kutta integration method
 
 model, kwargs = styles[name]
 attractor = model(dt=dt; kwargs...)

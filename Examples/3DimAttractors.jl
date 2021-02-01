@@ -1,7 +1,9 @@
 using Plots, Random
 
-include("../DynamicalSystems/LorenzAttractor.jl")
-include("../DynamicalSystems/RosslerModel.jl")
+# include("../DynamicalSystems/LorenzAttractor.jl")
+# include("../DynamicalSystems/RosslerModel.jl")
+
+using .ChaosAndFractals
 
 styles = Dict(
     "Lorenz Attractor" => (Lorenz,  (a=0.1, b=0.1, c=14)),
