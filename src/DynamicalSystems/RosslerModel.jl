@@ -3,6 +3,7 @@
 Implementation of the Rossler system by Rico van Midde, 2021
 
 =#
+export Rossler, step!
 
 Base.@kwdef mutable struct Rossler
     dt::Float64 = 0.02

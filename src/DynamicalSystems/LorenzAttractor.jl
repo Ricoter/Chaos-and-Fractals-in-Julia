@@ -12,6 +12,7 @@ an oversimplified model of atmospheric convection when the parameters σ,
 ρ, β are positive.
 
 =#
+export Lorenz, step!
 
 Base.@kwdef mutable struct Lorenz
     # timestep size

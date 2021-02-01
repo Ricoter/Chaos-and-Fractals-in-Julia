@@ -9,7 +9,7 @@ Chen, Guanrong; Jinhu Lu (2006). "GENERATING MULTISCROLL CHAOTIC ATTRACTORS: THE
 
 #TODO needs test and example
 #FIXME the evolution diverges, chen used Runge Kutta, that could possibly be the problem
-
+export Chua, step!
 Base.@kwdef mutable struct Chua
     dt::Float64 = 0.02
 
