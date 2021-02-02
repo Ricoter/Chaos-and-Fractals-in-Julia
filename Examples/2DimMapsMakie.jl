@@ -5,9 +5,9 @@ Example: plots in Makie of 3D dynamical system
 # TODO make this into an animation
 
 using GLMakie, AbstractPlotting
-
-include("../DynamicalSystems/HenonAttractor.jl")
-include("../DynamicalSystems/PWLDuffingAttractor.jl")
+using .ChaosAndFractals
+# include("../DynamicalSystems/HenonAttractor.jl")
+# include("../DynamicalSystems/PWLDuffingAttractor.jl")
 
 # 
 styles = Dict(

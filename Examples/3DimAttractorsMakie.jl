@@ -5,10 +5,6 @@ Example: plots in Makie of 3D dynamical system
 # TODO make this into an animation
 
 using GLMakie, AbstractPlotting
-
-# include("../DynamicalSystems/LorenzAttractor.jl")
-# include("../DynamicalSystems/RosslerModel.jl")
-# include("../DynamicalSystems/ChuaAttractor.jl")
 using .ChaosAndFractals
 
 # 
