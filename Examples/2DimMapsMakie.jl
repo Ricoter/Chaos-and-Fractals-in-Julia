@@ -13,16 +13,17 @@ styles = Dict(
 )
 
 name = "Henon Attractor"
+name = "PWLDuffing Attractor"
 
 model, kwargs = styles[name]
 attractor = model()#;kwargs...)
-xy = [ChaosAndFractals.step!(attractor) for _=1:1000]
+xy = [ChaosAndFractals.step!(attractor) for _=1:10000]
 x = [x for (x,_) in xy]
 y = [y for (_,y) in xy]
 
 f = Figure()
 
-scatter(f[1:2,1], xy, markersize=0.5, color=(:blue, 0.8))
+lines(f[1:2,1], xy, markersize=0.5, color=(:blue, 0.8))
 lines(f[1,2], x, axis = (ylabel = "x",), color=(:green, 0.8))
 lines(f[2,2], y, axis = (ylabel = "y", xlabel= "t"), color=(:purple, 0.8))
 
