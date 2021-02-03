@@ -4,8 +4,6 @@ Rico van Midde 2021
 =#
 
 # TODO convert this code to makie to compare
-include("../DynamicalSystems/LogisticMap.jl")
-include("../DynamicalSystems/SineMap.jl")
 
 function Bifurcation(
     attractor;              # Struct of the 1D system that has a next! function

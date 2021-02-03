@@ -2,8 +2,6 @@
 Implementation of bifuration diagram
 Rico van Midde 2021
 =#
-include("../DynamicalSystems/LogisticMap.jl")
-include("../DynamicalSystems/SineMap.jl")
 
 function Bifurcation(
     attractor;              # Struct of the 1D system that has a next! function
