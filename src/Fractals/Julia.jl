@@ -29,7 +29,7 @@ const XRANGE = -2:0.001:2
 const YRANGE = -1.5:0.001:1.5
 const PLANE = complex.(XRANGE', YRANGE)
 
-function Julia(c)
+function Julia()
     """Mandelbrot was Right"""
     z = 0 
     for _=1:MAX_ITER
