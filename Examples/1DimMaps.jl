@@ -2,15 +2,7 @@
 Example of Bifurcation diagram en Cobweb-plots for various 1D maps
 =#
 
-using Plots
-
-# include("../DynamicalSystems/SineMap.jl")
-# include("../DynamicalSystems/TentMap.jl")
-# include("../DynamicalSystems/LogisticMap.jl")
-
-# include("../Plots/Cobweb.jl")
-# include("../Plots/Bifurcation.jl")
-using .ChaosAndFractals
+using .ChaosAndFractals, Plots
 
 const styles = Dict(
     # name          => (map, rspan)
@@ -35,11 +27,9 @@ for (name, (map, rspan)) ∈ styles
     display(plot!(x, y))
 end
 
-
 # Compare Bifurcation Diagrams
 for (name, (map, rspan)) ∈ styles
 
     plt = Bifurcation(map, rspan=rspan, title=name)
     display(plt)
 end
-
