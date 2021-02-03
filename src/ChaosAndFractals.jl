@@ -20,15 +20,15 @@ include("DynamicalSystems/RosslerModel.jl")
 include("DynamicalSystems/SineMap.jl")
 include("DynamicalSystems/TentMap.jl")
 
-# TODO seperate example from function
-include("Fractals/Julia.jl")
-include("Fractals/Manderbrot.jl")
+# # TODO seperate example from function
+# include("Fractals/Julia.jl")
+# include("Fractals/Manderbrot.jl")
 
-# TODO add iteration model
-include("IterativeMethods/RK4.jl")
+# # TODO add iteration model
+# include("IterativeMethods/RK4.jl")
 
-include("Makie/Bifurcation.jl")
-include("Makie/Cobweb.jl")
+# include("Makie/Bifurcation.jl")
+# include("Makie/Cobweb.jl")
 
 include("Plots/Bifurcation.jl")
 include("Plots/Cobweb.jl")
