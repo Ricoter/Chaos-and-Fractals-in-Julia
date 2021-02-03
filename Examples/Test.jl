@@ -1,14 +1,6 @@
 using Plots
 
-include("../DynamicalSystems/SineMap.jl")
-include("../DynamicalSystems/TentMap.jl")
-include("../DynamicalSystems/LogisticMap.jl")
-include("../DynamicalSystems/LorenzAttractor.jl")
-
-include("../Plots/Bifurcation.jl")
-include("../Plots/Cobweb.jl")
-
-# include("NBodySimulation.jl")
+using .ChaosAndFractals
 
 # TODO rewrite in some compact examples
 
